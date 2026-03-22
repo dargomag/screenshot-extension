@@ -1,0 +1,2 @@
+# screenshot-extension
+screenshot-extension
