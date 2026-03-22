@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 220px;
+      background: #0f0f0f;
+      color: #f0f0f0;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      border: 2px solid #00ff88;
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: '';
+      position: absolute;
+      top: 4px; left: 4px;
+      right: 4px; bottom: 4px;
+      border: 1px dashed #00ff8855;
+    }
+
+    .logo-text {
+      font-size: 11px;
+      font-weight: 600;
+      color: #00ff88;
+      line-height: 1.3;
+      letter-spacing: 0.05em;
+    }
+
+    .hint {
+      font-size: 10px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      border-left: 2px solid #222;
+      padding-left: 10px;
+    }
+
+    .hint span {
+      color: #aaa;
+    }
+
+    button {
+      width: 100%;
+      background: #00ff88;
+      color: #0f0f0f;
+      border: none;
+      padding: 10px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    button:hover {
+      background: #00ffaa;
+      transform: translateY(-1px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .shortcut {
+      text-align: center;
+      font-size: 9px;
+      color: #444;
+      margin-top: 10px;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <div class="logo-icon"></div>
+    <div class="logo-text">ВЫДЕЛЕНИЕ<br>ОКОШКА</div>
+  </div>
+
+  <div class="hint">
+    Выделите область мышью —<br>
+    <span>скриншот скопируется в буфер.</span><br>
+    Вставьте в чат через <span>Ctrl+V</span>.
+  </div>
+
+  <button id="startBtn">▣  ВЫДЕЛИТЬ ОБЛАСТЬ</button>
+
+  <div class="shortcut">ESC — отмена</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
